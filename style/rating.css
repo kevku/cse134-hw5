@@ -1,0 +1,24 @@
+/* rating.css */
+.star {
+  font-size: 5rem;
+  cursor: pointer;
+  color: gray;
+  display: inline;
+}
+
+.star:hover,
+.star.active {
+  color: gold;
+}
+
+.nojsForm {
+  visibility: visible;
+}
+
+#rating {
+  display: inline;
+}
+
+p {
+  font-weight: bold;
+}
