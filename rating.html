@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Rating"/>
+    <meta name="keywords" content="HTML, CSS, JavaSctipt, Bryson Collins"/>
+    <meta name="author" content="Kevin Kuang"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robots" content="noindex, nofollow"/>
+    <link rel="stylesheet" href="style/rating.css">
+    <title>Rating Widget</title>
+  </head>
+  <body>
+    <header>
+      <noscript>
+        <style>
+            #rating {display: none;}
+        </style>
+      </noscript>
+      <title>Rating Widget</title>
+    </header>
+    <h1>Rating Widget</h1>
+    <rating-widget>
+      <form id="rateForm" action="https://httpbin.org/post" method="POST">
+        <label class="nojsForm" for="nojsRating">How satisfied are you?</label>
+        <input type="hidden" name="question" value="How satisfied are you?">
+        <input type="hidden" id="sentBy" name="sentBy" value="HTML">
+        <input class="nojsForm" type="number" id="nojsRating" name="rating" min="1" max="5" value="0" required>
+        <button class="nojsForm" type="submit">submit</button>
+      </form>
+      <div id="rating" class="jsRating">
+        <span class="star" onmouseover="highlightStars(1)" onmouseout="resetStars()" onclick="lowRate(1)">&#9733;</span>
+        <span class="star" onmouseover="highlightStars(2)" onmouseout="resetStars()" onclick="lowRate(2)">&#9733;</span>
+        <span class="star" onmouseover="highlightStars(3)" onmouseout="resetStars()" onclick="lowRate(3)">&#9733;</span>
+        <span class="star" onmouseover="highlightStars(4)" onmouseout="resetStars()" onclick="highRate(4)">&#9733;</span>
+        <span class="star" onmouseover="highlightStars(5)" onmouseout="resetStars()" onclick="highRate(5)">&#9733;</span>
+      </div>
+    </rating-widget>
+    <script src="scripts/rating.js" type="text/javascript"></script>
+  </body>
+
+</html>
